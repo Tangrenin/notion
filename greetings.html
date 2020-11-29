@@ -41,7 +41,8 @@ body{
     var hrs = today.getHours();
     var dayOfWeek = weekday[today.getDay()];
     var date = dayOfWeek+" " + today.getDate() + "/" +(today.getMonth()+1) +'/'+today.getFullYear()  ;
-
+    var currentTime = hrs + " : " + today.getMinutes() + " : " + today.getSeconds ;
+    
     var greet;
 
     if (hrs >= 6 && hrs <= 19)
@@ -52,7 +53,6 @@ body{
         greet = 'Bonsoir Quentin :)  ';
 
     document.getElementById('lbl').innerHTML =
-        greet+=`<div id="date"> It's ${date}</div>`;
-        greet+=`<div id="hrs"> It's ${hrs}</div>`;
+        greet+=`<div id="date"> It's ${date}</div>` + `<div id="currentTime"> It's ${currentTime}</div>`;
 </script> 
 </html>
